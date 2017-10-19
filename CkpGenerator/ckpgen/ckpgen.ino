@@ -1,23 +1,33 @@
-#include <TimerOne.h>
+/*
+ * Funcionamiento:
+ * 
+ * se lopea por la cantidad de tiempo indicada en la variable tiempo (Microsegundos)
+ * la cantidad total de dientes (Dientes) menos los dientes faltantes (DieFaltantes)
+ * 
+ */
 
-#define pinPulso 13
 
-long Tiempo = 5000000;
-long Dientes = 5;
-long DieFaltantes = 3;
-long BaseTime = 1000000;
+
+#include <TimerOne.h> //Inluir libreria TimerOne
+
+#define pinPulso 13 //Definicion del pin de salida
+
+long Tiempo = 5000000; //Variable de tiempo donde se ejecutara el loop
+long Dientes = 5; //Dientes totales
+long DieFaltantes = 3; //Dientes Faltantes
+long BaseTime = 1000000; //Base de tiempo para calculos
 
 void setup() {
 
-Timer1.initialize(60000000); 
-pinMode(pinPulso, OUTPUT);
+Timer1.initialize(60000000);  //Inizialisacion del Timer1
+pinMode(pinPulso, OUTPUT); //Configuracion del pin
 //getDientes();
 //delay(1000);
 //getDieFaltantes();
 //delay(1000);
 //getTiempo();
 //delay(1000);
-doWork();
+doWork();//Ir al void doWork
 }
 
 void loop() {
