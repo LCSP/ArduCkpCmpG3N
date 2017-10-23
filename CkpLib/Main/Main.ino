@@ -1,3 +1,4 @@
+
 /*
  * Funcinamientro PREVISTO:
  * Se pregunta al usuario que ecu usar (Se muestra una lista), una vez elegida
@@ -12,15 +13,12 @@
 
 #define pinPot A0//Definicion pin Potencimetro
 #define pinCKP 13//Definicion pin CKP
-#define pinCMP 12//Definicion pin CMP
+#define pinCMP 8//Definicion pin CMP
 int ValPot; //Variable para potenciometro
 const int ArrayLen = 1; //Variable tamaño array
-int S2000CKP[5] = {1,1,5,0,0}; //Pulsos CKP
-int S2000CMP[5] = {0,0,5,1,1}; //Pulsos CMP
 String ECUS[ArrayLen] = {"S2000"}; //Lista de Ecus
 String EcuSel; //Variable de Ecu Seleccionada por el User
-String GetEcuCKP; //Intento de geteoEcu
-String GetEcuCMP;//Intento de geteoEcu
+byte EcuSig[255];
 boolean State = false; //Controlador Loop
 
 void setup() {
@@ -35,20 +33,12 @@ Menu(); //Llamado al void menu para pedir info al user
 
 void loop() {
 ValPot = analogRead(pinPot); //Lectura del valor del potenciometro
-if(Serial.available()){
-  String ST = Serial.readString();//Lectura para parar el loop
-  if(ST == "Stop" or "stop"){
-    State == false;
-    Menu();
-  }
-}
+
 while(State == true){
-Serial.println(GetEcuCKP[2]);//Intento de generacion con array a base de variable TODO
-Serial.println(GetEcuCMP[2]);//Intento de generacion con array a base de variable TODO
-delay(1000);//delay para pruebas
+  CKPCMP(EcuSig, pinCKP, pinCMP, ValPot, State);
+  
+
 }
-
-
 }
 
 void Menu(){
@@ -58,11 +48,14 @@ void Menu(){
    }
   while(!Serial.available()){}
   EcuSel = Serial.readString();
+  GetSignal();
   Serial.println("Ejecutando: " + ECUS[EcuSel.toInt()]);
   Serial.println("Para detener enviar Stop");
-  GetEcuCKP = SYS(EcuSel, 1);
-  GetEcuCMP = SYS(EcuSel, 2);
   State = true;
 }
 
+void GetSignal(){
+  getSig(EcuSig, EcuSel.toInt());
+  Serial.println("Cargando... Aguarde unos instantes");
+}
 
