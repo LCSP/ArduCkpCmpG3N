@@ -42,6 +42,9 @@ Lista de versiones
 
 > - /Main/Main.ino / Hilo principal
 > - /Main/Ifs.ino / Hilo Ifs
+> - /Main/Menus.ino / Hilo Menus
+> - /Main/GetAdapter.ino / Hilo para devolver array con variables en base a modelo
+> - /Main/CMP_CKP.ino / Hilo de generacion de CKP y CMP sincronizadas
 
 
 
