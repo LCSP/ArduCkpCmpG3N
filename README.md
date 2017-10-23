@@ -24,6 +24,7 @@ Lista de versiones
 > **CkpLib**
 
 > - 18/10/17 - Primer Release
+> - 23/10/17 - Se agrego parte del codigo de generacion de CKP y CMP. TODO: No sale del bucle for dentro de "CKP_CMP.ino"
 
 #### <i class="icon-folder-open"></i> Lista de Archivos
 
