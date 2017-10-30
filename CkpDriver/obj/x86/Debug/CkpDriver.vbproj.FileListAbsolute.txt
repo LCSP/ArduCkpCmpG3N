@@ -1,0 +1,9 @@
+G:\BasicProyects\CkpDriver\CkpDriver\bin\Debug\CkpDriver.exe
+G:\BasicProyects\CkpDriver\CkpDriver\bin\Debug\CkpDriver.pdb
+G:\BasicProyects\CkpDriver\CkpDriver\bin\Debug\CkpDriver.xml
+G:\BasicProyects\CkpDriver\CkpDriver\obj\x86\Debug\CkpDriver.Form1.resources
+G:\BasicProyects\CkpDriver\CkpDriver\obj\x86\Debug\CkpDriver.Resources.resources
+G:\BasicProyects\CkpDriver\CkpDriver\obj\x86\Debug\CkpDriver.vbproj.GenerateResource.Cache
+G:\BasicProyects\CkpDriver\CkpDriver\obj\x86\Debug\CkpDriver.exe
+G:\BasicProyects\CkpDriver\CkpDriver\obj\x86\Debug\CkpDriver.xml
+G:\BasicProyects\CkpDriver\CkpDriver\obj\x86\Debug\CkpDriver.pdb
