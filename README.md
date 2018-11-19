@@ -49,5 +49,5 @@ Lista de versiones
 
 
 
-    Creado Por Lucio Carrera. Licencia MIT. 
-    Email: lcfcnd1@hotmail.com / lcfcnd1@gmail.com
+    Creado Por mi. Licencia MIT. 
+   
